@@ -172,9 +172,9 @@ public class C0619_08학생성적프로그램 {
 				int cnt = -1;
 				System.out.println("[ 성적 검색 ]");
 				System.out.println("검색할 학생의 이름을 입력하세요. >> ");
-				String search = scan.nextLine();
+				String search_4 = scan.nextLine();
 				for (int i=0;i<s_count;i++) {
-					if (name[i].equals(search)) {
+					if (name[i].equals(search_4)) {
 						System.out.printf("%s 학생을 찾았습니다.",name[i]);
 						cnt = 1;
 					}if (cnt==-1) {
