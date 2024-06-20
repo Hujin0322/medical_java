@@ -25,15 +25,15 @@ public class C0619_09 {
 			System.out.println("-----------------------------------------");
 			System.out.println("원하는 번호를 입력하세요. >> ");
 			int choice = scan.nextInt();
-			scan.next();
+			scan.nextLine();
 			
 			switch (choice) {
 			case 1:
 				System.out.println("1. 성적 입력");
 				while (true) {
 					System.out.println("이름을 입력하세요.(0. 취소) >> ");
-					name[s_count] = scan.nextLine();
-					if (name[s_count].equals("0")) {
+					String temp = scan.nextLine();
+					if (temp.equals("0")) {
 						System.out.println("성적 입력을 종료합니다.");
 						break;}
 					else {
@@ -42,6 +42,12 @@ public class C0619_09 {
 						System.out.printf("%s 점수를 입력하세요. >> ",title[i+2]);
 						score[s_count][i] = scan.nextInt();
 						}
+						
+						//합계, 평균
+						score[s_count][3] = score[s_count][0] + score[s_count][1] + score[s_count][2];
+						avg[s_count] = score[s_count][3]/3.;
+						
+						System.out.println("성적 입력 완료");
 						s_count++;
 					}
 				}//while
