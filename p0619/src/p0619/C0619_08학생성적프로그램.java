@@ -20,6 +20,8 @@ public class C0619_08학생성적프로그램 {
 			System.out.println("1. 성적입력");
 			System.out.println("2. 성적출력");
 			System.out.println("3. 성적수정");
+			System.out.println("4. 성적검색");
+			System.out.println("5. 등수처리");
 			System.out.println("0. 프로그램 종료");
 			System.out.println("-------------------------");
 			System.out.println("원하는 번호를 입력하세요.>> ");
@@ -165,7 +167,23 @@ public class C0619_08학생성적프로그램 {
 				System.out.println("입력이름 : "+search);
 
 				break;
+			
+			case 4:
+				int cnt = -1;
+				System.out.println("[ 성적 검색 ]");
+				System.out.println("검색할 학생의 이름을 입력하세요. >> ");
+				String search = scan.nextLine();
+				for (int i=0;i<s_count;i++) {
+					if (name[i].equals(search)) {
+						System.out.printf("%s 학생을 찾았습니다.",name[i]);
+						cnt = 1;
+					}if (cnt==-1) {
+						System.out.println("찾는 학생이 없습니다.");
+					}
+				}
 				
+				break;
+			
 			case 0:
 				System.out.println("[ 프로그램 종료 ]");
 				System.out.println("프로그램을 종료합니다!!");
